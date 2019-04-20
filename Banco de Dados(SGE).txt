@@ -1,0 +1,41 @@
+#######Conexao
+
+private function abrir() {
+        $local = "localhost";
+        $banco = "sge";
+        $usuario = "root";
+        $senha = "usbw";
+        $conn = mysqli_connect($local, $usuario, $senha, $banco);
+        return $conn;
+    }
+
+########Tabelas
+
+create table aluno(
+id int(10) primary key auto_increment,
+nome varchar(50),
+matricula int(11),
+email varchar(50),
+telefone varchar(13),
+bairro varchar(50),
+cidade varchar(50)
+);
+
+create table professor(
+id int(10) primary key auto_increment,
+nome varchar(50),
+dataAd date,
+email varchar(50),
+cidade varchar(50),
+formacao varchar(50),
+areaAtuacao varchar(50),
+telefone varchar(13)
+);
+
+create table livro(
+id int(11) primary key auto_increment,
+nome varchar(50),
+editora varchar(50),
+edicao int(11),
+dataPu date
+);
